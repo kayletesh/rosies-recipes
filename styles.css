@@ -1,16 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Irish+Grover&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
+:root {
+  --cream: #f1d8b4;
+  --walnut: #c59472;
+}
+
+body {
+  background-color: var(--cream);
+  /* display: flex; */
+}
+
+header,
+footer {
+  /* font-family: "Irish Grover", "Roboto Serif", serif; */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 11vh;
-
-  background-color: #c59472;
+  border: 2px solid black;
+  background-color: var(--walnut);
 }
+
+header {
+  height: 125px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 4px #00000052;
+}
+
+footer {
+  height: 75px;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* #test-div {
+  height: 1000px;
+  width: 200px;
+  background-color: aliceblue;
+} */
