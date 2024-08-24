@@ -7,11 +7,17 @@
 
 :root {
   --cream: #f1d8b4;
-  --walnut: #c59472;
+  --light-cream: #ffedd3;
+  --walnut: #9e7b63;
+  --old-walnut: #c59472;
+  --border: #0000008a;
+  --shadow: #00000053;
 }
 
 body {
+  position: relative;
   background-color: var(--cream);
+  min-height: 100vh;
   /* display: flex; */
 }
 
@@ -21,7 +27,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  border: 2px solid var(--border);
   background-color: var(--walnut);
 }
 
@@ -29,15 +35,81 @@ header {
   height: 125px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  box-shadow: 0px 4px 4px #00000052;
+  box-shadow: 0px 4px 4px var(--shadow);
 }
 
 footer {
   height: 75px;
   font-size: 16px;
-  position: fixed;
+  position: absolute;
+  left: auto;
   bottom: 0;
   width: 100%;
+}
+
+/* class box order for mobile
+recipe container -> recipe card -> [image, title, description]
+flex column -> flex column */
+
+#recipe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-button {
+  background-color: var(--light-cream);
+  margin-top: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0px 4px 4px var(--shadow);
+  border-radius: 3px;
+  width: 225px;
+  height: 50px;
+}
+
+.recipe-card,
+.recipe-card__image,
+.recipe-card__title,
+.recipe-card__description {
+  border: 2px solid var(--border);
+  box-shadow: 0px 4px 4px var(--shadow);
+  border-radius: 5px;
+}
+
+.recipe-card {
+  background-color: var(--walnut);
+  display: flex;
+  /* gap: 20px; */
+  flex-direction: column;
+  justify-content: space-around;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 300px;
+  height: 250px;
+  /* padding-top: 20px; */
+  /* padding-bottom: 20px; */
+}
+
+.recipe-card__image,
+.recipe-card__title,
+.recipe-card__description {
+  background-color: var(--light-cream);
+}
+
+.recipe-card__image {
+  width: 150px;
+  height: 100px;
+}
+
+.recipe-card__title {
+  width: 200px;
+  height: 20px;
+}
+
+.recipe-card__description {
+  width: 250px;
+  height: 50px;
 }
 
 /* #test-div {
