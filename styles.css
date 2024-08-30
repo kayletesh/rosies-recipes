@@ -35,9 +35,9 @@ footer {
 
 header {
   height: 125px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: 0px 4px 4px var(--shadow);
+  /* border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
+  box-shadow: 0px 5px 5px var(--shadow);
 }
 
 footer {
@@ -50,10 +50,10 @@ footer {
 }
 
 /* class box order for mobile
-recipe container -> recipe card -> [image, title, description]
+recipe cards-wrapper -> recipe card -> [image, title, description]
 flex column -> flex column */
 
-#recipe-container {
+.recipe-cards-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,19 +61,45 @@ flex column -> flex column */
   padding-bottom: 100px;
 }
 
-.about-button {
-  font-family: "Roboto", sans-serif, serif;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-tab__accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-tab__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--light-cream);
-  margin-top: 20px;
+  margin: 20px 0px;
   border: 1px solid var(--border);
   box-shadow: 0px 4px 4px var(--shadow);
   border-radius: 3px;
-  width: 225px;
+  width: 200px;
   height: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+button {
+  background: unset;
+  border: unset;
+  font-family: "Roboto", sans-serif, serif;
+  font-size: 18px;
 }
 
 .recipe-card,
-.recipe-card__image {
+.recipe-card__image,
+.test {
   border: 1px solid var(--border);
   box-shadow: 0px 4px 4px var(--shadow);
   border-radius: 5px;
@@ -90,7 +116,8 @@ flex column -> flex column */
 }
 
 .recipe-card__title,
-.recipe-card__description {
+.recipe-card__description,
+.test {
   text-align: center;
   color: var(--light-cream);
   text-shadow: 0px 4px 4px var(--text-shadow);
@@ -109,8 +136,12 @@ flex column -> flex column */
   max-width: 250px;
 }
 
-/* #test-div {
-  height: 1000px;
-  width: 200px;
-  background-color: aliceblue;
-} */
+.test {
+  border: 2px solid var(--border);
+  padding: 40px 20px;
+  /* min-height: 500px; */
+  width: 350px;
+  background-color: var(--walnut);
+  margin-bottom: 20px;
+  font-size: 18px;
+}

@@ -16,12 +16,33 @@
     </header>
     <main>
       <!-- Card container -> recipe card(s) -> Recipe image , recipe title , recipe description -->
-      <div id="recipe-container">
-        <div id="about-tab">
-          <button class="about-button" id="about-button">
-            About Rosie's Recipes
-          </button>
+      <div id="about-tab__accordion" class="about-tab__accordion">
+        <h3
+          role="button"
+          id="about-tab__button"
+          aria-expanded="false"
+          class="accordion-toggle"
+          aria-controls="about-card"
+        >
+          <span class="accordion-title">About Rosie's Recipes</span>
+        </h3>
+        <div id="about-card" class="test" hidden>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
+            rerum nostrum dolorem, ipsam veniam iure quis asperiores similique
+            repudiandae reiciendis ratione quasi at necessitatibus ducimus!
+            Excepturi sapiente iste fugiat in!
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            delectus esse dolores aut consequuntur dolorum culpa at, laboriosam
+            voluptas nisi quam ea nihil aperiam adipisci suscipit cumque
+            inventore, commodi eius!
+          </p>
         </div>
+      </div>
+      <div class="recipe-cards-wrapper">
         <div class="recipe-card recipe-card--one" id="recipe-card--one">
           <img class="recipe-card__image" src="images/pan-seared-salmon.JPG" />
           <div class="recipe-card__title">"Pan Seared Salmon"</div>
@@ -58,7 +79,6 @@
         </div>
         <footer>Designed by Kayle🤍</footer>
       </div>
-      <!-- <div id="test-div"></div> -->
     </main>
 
     <script src="script.js" defer></script>
