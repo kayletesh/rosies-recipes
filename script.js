@@ -14,7 +14,7 @@ function toggleAboutTab() {
   if (isOpen) {
     aboutButton.setAttribute("aria-expanded", false);
     aboutCard.setAttribute("hidden", "");
-    aboutButtonSpan.innerText = "About Rosie's Recipes";
+    aboutButtonSpan.innerText = "About Rosie";
   } else {
     aboutButton.setAttribute("aria-expanded", true);
     aboutCard.removeAttribute("hidden");
